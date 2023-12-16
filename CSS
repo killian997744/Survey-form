@@ -1,0 +1,215 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-size: 1.25rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 545;
+    line-height: 1.8;
+    margin: 0;
+    color: white;
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgb(0, 0, 139);
+    background-image: linear-gradient(
+    rgba(187, 152, 75, 0.555),
+    rgb(45, 81, 105)),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1{
+    font-weight: 500;
+}
+
+
+h1,p{
+    line-height: 0.8;
+    white-space: nowrap;
+    text-shadow: 1px 0.6px rgba(0, 0, 0, 0.568);
+}
+
+label{
+    display: flex;
+    text-align: center;
+    font-size: normal;
+    
+} 
+
+header{
+    margin: 3rem auto 4rem auto;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea{
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    background: white;
+    background-clip: padding-box;
+}
+
+.input-radio,
+.input-checkbox{
+    min-height: 1.2rem;
+    min-width: 1.2rem;
+    margin-right: 5px;  
+} 
+
+.question-mark{
+    margin-left: 10px;
+    padding: 3px;
+    border-radius: 30%;
+    background-color: rgba(207, 187, 120, 0.788);
+    color: black;
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.788);
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.788);
+    transition: border 0.5sec ease-in-out;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.question-mark:hover{
+    border: 3px solid rgba(0, 0, 0, 0.788);
+}
+
+
+.description{
+    font-style: italic;
+    padding-left: 10px;
+
+}
+
+.text-center{
+    text-align: center;
+}
+
+.container{
+    margin: 20px auto 0 auto;
+ 
+}
+
+/* tablet and phone */
+
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+
+form{
+    background: rgba(71, 66, 141, 0.938) ;
+    border-radius: 10px;
+    border: 1px solid black; 
+    padding: 40px;
+}
+
+.group-form{
+    line-height: 50px;
+}
+
+.group-control{
+    padding: 0.5rem 0.6rem;
+    border: 2.5px solid black;
+    border-radius: 8px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.788);
+    transition: border-color 0.5s ease-in-out; border-radius: 0.5s ease-in-out;
+    width: 100%;
+
+}
+
+.group-control:focus{
+    border-color: rgb(172, 120, 43);
+    outline: 0;
+    border-radius: 0.6em;
+}
+
+
+textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+
+button{
+    border: none;
+    width: 100%;
+    background-color: rgba(255, 217, 0, 0.801);
+    padding: 15px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.788);
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: 0.3px 0.3px rgba(0, 0, 0, 0.788);
+   
+}
+
+.check-text{
+    font-style: italic;
+    font-size: 17px;
+}
+
+
+/* modal set-up */
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.788);
+    color: black;
+}
+
+/*wieght from 400 to 600 for a semi-bold style */
+
+.close-mod{
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-text{
+    text-shadow: none;
+    margin-top: 20px;
+    line-height: 10px;
+}
