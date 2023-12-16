@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="kk.css">
+  <title>Survey form</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="text-center">freeCodeCamp Survey Form</h1>
+      <p class="description text-center">Thank you for taking the time to help us improve the platform</p>
+    </header>
+
+    <form>
+      <div class="group-form">
+        <label for="name">Name</label><input class="group-control" type="text" id="name" placeholder="Enter your name" autocomplete="on"  required>
+      </div>
+      <div class="group-form">
+        <label for="email">Email</label><input class="group-control"  type="email" id="email" placeholder="Enter your Email" autocomplete="on" required>
+      </div>
+      <div class="group-form">
+        <label for="number">Age<span class="description">(optional)</span></label><input class="group-control"  type="number" id='number' min="10" max="99" placeholder="Age" autocomplete="off" required>
+      </div>
+      <div class="group-form">
+        <p>Which option best describes your current role<span class="question-mark instruction-text">?</span></p>
+        <select id="dropdown" class="group-control" >
+          <option disabled value="" selected>Select current role</option>
+          <option value="student">Student</option>
+          <option value="full-time">Full time job</option>
+        </select>
+      </div>
+      <div class="group-form">
+        <p>Would you recommend freeCodeCamp to a friend<span class="question-mark instruction-text">?</span></p>
+        <label for="recommend-def"><input class="input-radio" type="radio" name='useronly' value="definitly" id="recommend-def" required>Definitly</label>
+        <label for="recommend-maybe"><input class="input-radio" type="radio" name='useronly' value="maybe" id="recommend-maybe" required>Maybe</label>
+        <label for="recommend-hesitant"><input class="input-radio" type="radio" name='useronly' value="not-sure" id="recommend-hesitant" required>Not sure</label>
+      </div>
+      <div class="group-form">
+        <p>What is your favorite feature of freeCodeCamp<span id="modal-instruction" class="question-mark instruction-text">?</span></p>
+        <select id="most-like" class="group-control" >
+          <option value="" disabled selected>Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+        </select>
+      </div>
+      <div class="group-form">
+        <p>What would you like to see improved<span class="question-mark instruction-text">?</span><span class="check-text">(Check all that apply)</span></p>
+        <label for="improve" required><input class="input-checkbox" type="checkbox" name="improve" id="improve" value="front-end-project">Front-end Projects</label>
+        <label for="improve-front" required><input class="input-checkbox" type="checkbox" name="improve" id="improve-front" value="back-end-project">Back-end Projects</label>
+        <label for="improve-data" required><input class="input-checkbox" type="checkbox" name="improve" id="improve-data" value="data-visualization">Data Visualization</label>
+      </div>
+      <div class="group-form">
+        <p>Any comments or suggestions<span class="question-mark instruction-text">?</span></p>
+        <textarea class="group-control" name="comment" id="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+      <div class="group-form">
+        <button type="submit">Submit</button>
+      </div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-mod" onclick='closeModal()'>&times;</span>
+          <p class="modal-text">just for training</p>
+          <p class="modal-text">...and more training</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="kkk.js"></script>
+</html>
