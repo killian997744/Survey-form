@@ -1,0 +1,15 @@
+function openModal (){
+    document.getElementById('modal').style.display='block';
+}
+
+function closeModal (){
+    document.getElementById('modal').style.display='none';
+}
+
+
+
+let instructionTextElements = document.querySelectorAll('.instruction-text');
+
+instructionTextElements.forEach(function (element) {
+    element.addEventListener('click', openModal);
+});
